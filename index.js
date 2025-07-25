@@ -1,5 +1,6 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
+const { getParameterStore } = require('./util/get-parameter-store')
 
 app.use(async () => {
   const MONGODB_URI = await getParameterStore("mongodb-uri")
