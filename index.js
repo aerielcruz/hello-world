@@ -2,9 +2,11 @@ const express = require('express');
 const app = express();
 const { getParameterStore } = require('./util/get-parameter-store')
 
-app.use(async () => {
-  const MONGODB_URI = await getParameterStore("mongodb-uri")
-  console.log('Parameter store value:', MONGODB_URI)
+app.use(async (req, res, next) => {
+  // const MONGODB_URI = await getParameterStore("mongodb-uri")
+  // console.log('Parameter store value:', MONGODB_URI)
+  console.log('TEST')
+  next()
 })
 
 app.get('/', function (req, res) {
