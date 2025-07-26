@@ -9,7 +9,9 @@ app.use(async (req, res, next) => {
   next()
 })
 
-app.get('/', function (req, res) {
+app.get('/', async function (req, res) {
+  const MONGODB_URI = await getParameterStore("mongodb-uri")
+  console.log('Parameter store value:', MONGODB_URI)
   res.send('Hello World!');
 });
 
