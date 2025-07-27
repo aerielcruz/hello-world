@@ -1,6 +1,6 @@
 const { load } = require("@azure/app-configuration-provider");
 
-const connectionString = process.env.AZURE_APP_CONFIG_CONNECTION_STRING
+const connectionString = process.env.AZURE_APPCONFIG_CONNECTION_STRING
 
 const getAppConfig = async (name) => {
   try {
