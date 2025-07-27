@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const { getParameterStore } = require('./util/get-parameter-store')
-const { getParamgetAppConfigeterStore } = require('./util/get-app-config')
+const { getAppConfig } = require('./util/get-app-config')
 
 app.get('/', async function (req, res) {
   // AWS
